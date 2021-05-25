@@ -1,0 +1,96 @@
+{% extends "fgv_page.html" %}
+{% set homepage_style = ( g.homepage_style or '1' ) %}
+
+{% block subtitle %}{{ _("Welcome") }}{% endblock %}
+
+{% block maintag %}{% endblock %}
+{% block toolbar %}{% endblock %}
+
+{% block content %}
+  <div class="homepage layout-{{ homepage_style }}">
+    <div class="container">
+      {{ self.flash() }}
+    </div>
+    <main>
+      <div class="intro-and-gallery">
+        <div class="header-and-intro">
+          <div class="section intro-section">
+            <div class="container">
+              {% block promoted %}
+                {% snippet 'home/snippets/fgv_promoted.html' %}
+              {% endblock %}
+
+              {% block search %}
+                {% snippet 'home/snippets/fgv_search.html' %}
+              {% endblock %}
+            </div>
+          </div>
+        </div>
+
+        {% block featured_organization %}
+        <div class="section gallery-section gallery-section--cities">
+          <div class="container">
+            <h2
+              class="intro-section__title intro-section__title--cities"
+            >Cidades</h2>
+            {% snippet 'home/snippets/fgv_featured_organization.html' %}
+          </div>
+        </div>
+        {% endblock %}
+
+        <div class="section gallery-section gallery-section--data">
+          <div class="container">
+            <h2
+              class="intro-section__title intro-section__title--data"
+            >Dados</h2>
+            {% snippet 'snippets/fgv_tag_list.html' %}
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="section description-section">
+        <div class="container center">
+          <h2>O projeto</h2>
+          <p>
+            Big Data para o Desenvolvimento Urbano Sustentável é um projeto desenvolvido pela Fundação Getulio Vargas com financiamento do Banco Interamericano de Desenvolvimento (BID) e apoio do Waze, que cria uma oportunidade única de desenvolvimento de um modelo piloto de governança de dados massivos junto a cinco cidades na América Latina.
+          </p>
+        </div>
+      </div>
+
+      <div class="section map-section">
+        <div class="container">
+          <div class="map-section__content">
+            <p>
+              A FGV, como Agência Executora, coordena as atividades de três componentes do projeto, que tem previsão de desenvolvimento até 2020.
+            </p>
+
+            <h3 class="topic-title">
+              Componente I
+            </h3>
+            <p>
+              Mapeamento do Ecossistema de Dados e Marcos Regulatórios;
+            </p>
+
+            <h3 class="topic-title">
+              Componente II
+            </h3>
+            <p>
+              Desenvolvimento de Recursos Legais e Institucionais para o Acesso e Análise de Big Data;
+            </p>
+
+            <h3 class="topic-title">
+              Componente III
+            </h3>
+            <p>
+              Desenvolvimento de Ferramentas de Análise e Visualização de Dados Massivos e Disseminação do Projeto.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+{% endblock %}

@@ -1,0 +1,175 @@
+{% set current_lang = request.environ.CKAN_LANG %}
+<form
+  class="fgv-language-form"
+  action="{% url_for controller='util', action='redirect' %}"
+  data-module="select-switch"
+  method="POST"
+>
+  <select id="field-lang-select" name="url"
+  class="fgv-select"
+   data-module-dropdown-class="lang-dropdown"
+   data-module-container-class="lang-container"
+  >
+    <option value="/pt_BR/" {% if "pt_BR" == current_lang %}selected="selected" {% endif %}>
+      português (Brasil)
+    </option>
+    <option value="/en/" {% if "en"
+      == current_lang %}selected="selected" {% endif %}>
+      English
+    </option>
+    <option value="/es_AR/" {% if "es_AR" == current_lang %}selected="selected" {% endif %}>
+      español (Argentina)
+    </option>
+    <!-- <option value="/eu/">
+      euskara
+    </option>
+    <option value="/ro/">
+      română
+    </option>
+    <option value="/de/">
+      Deutsch
+    </option>
+    <option value="/he/">
+      עברית
+    </option>
+    <option value="/ca/">
+      català
+    </option>
+    <option value="/uk/">
+      українська
+    </option>
+    <option value="/id/">
+      Indonesia
+    </option>
+    <option value="/sk/">
+      slovenčina
+    </option>
+    <option value="/zh_CN/">
+      中文 (简体, 中国)
+    </option>
+    <option value="/ru/">
+      русский
+    </option>
+    <option value="/mk/">
+      македонски
+    </option>
+    <option value="/bg/">
+      български
+    </option>
+    <option value="/no/">
+      norsk bokmål (Norge)
+    </option>
+    <option value="/ne/">
+      नेपाली
+    </option>
+    <option value="/nl/">
+      Nederlands
+    </option>
+    <option value="/uk_UA/">
+      українська (Україна)
+    </option>
+    <option value="/da_DK/">
+      dansk (Danmark)
+    </option>
+    <option value="/ar/">
+      العربية
+    </option>
+    <option value="/fr/">
+      français
+    </option>
+    <option value="/pt_PT/">
+      português (Portugal)
+    </option>
+    <option value="/ja/">
+      日本語
+    </option>
+    <option value="/lv/">
+      latviešu
+    </option>
+    <option value="/el/">
+      Ελληνικά
+    </option>
+    <option value="/tr/">
+      Türkçe
+    </option>
+    <option value="/hu/">
+      magyar
+    </option>
+    <option value="/fi/">
+      suomi
+    </option> -->
+    <!-- <option value="/km/">
+      ខ្មែរ
+    </option>
+    <option value="/ko_KR/">
+      한국어 (대한민국)
+    </option>
+    <option value="/fa_IR/">
+      فارسی (ایران)
+    </option>
+    <option value="/en_AU/">
+      English (Australia)
+    </option>
+    <option value="/es/">
+      español
+    </option>
+    <option value="/hr/">
+      hrvatski
+    </option>
+    <option value="/sq/">
+      shqip
+    </option>
+    <option value="/sv/">
+      svenska
+    </option>
+    <option value="/mn_MN/">
+      монгол (Монгол)
+    </option>
+    <option value="/sl/">
+      slovenščina
+    </option>
+    <option value="/it/">
+      italiano
+    </option>
+    <option value="/gl/">
+      galego
+    </option>
+    <option value="/sr_Latn/">
+      srpski (latinica)
+    </option>
+    <option value="/th/">
+      ไทย
+    </option>
+    <option value="/tl/">
+      Filipino (Pilipinas)
+    </option>
+    <option value="/zh_TW/">
+      中文 (繁體, 台灣)
+    </option>
+    <option value="/sr/">
+      српски
+    </option>
+    <option value="/pl/">
+      polski
+    </option>
+    <option value="/lt/">
+      lietuvių
+    </option>
+    <option value="/is/">
+      íslenska
+    </option>
+    <option value="/cs_CZ/">
+      čeština (Česko)
+    </option>
+    <option value="/vi/">
+      Tiếng Việt
+    </option> -->
+
+    <!-- {% for locale in h.get_available_locales() %}
+      <option value="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.identifier == current_lang %}selected="selected"{% endif %}>
+        {{ locale.display_name or locale.english_name }}
+      </option>
+    {% endfor %} -->
+  </select>
+  <button class="btn js-hide" type="submit">{{ _('Go') }}</button>
+</form>

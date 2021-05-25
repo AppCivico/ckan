@@ -1,0 +1,8 @@
+{% set organizations = h.get_featured_organizations(count=30) %}
+<div class="gallery">
+  {% for organization in organizations %}
+    <figure class="gallery__figure">
+      {% snippet 'snippets/fgv_organization_item.html', organization=organization, truncate=50, truncate_title=35 %}
+    </figure>
+  {% endfor %}
+</div>

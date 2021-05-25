@@ -1,0 +1,36 @@
+{% set url=h.url_for(controller='organization', action='read', id=organization.name) %}
+{% set truncate=truncate or 0 %}
+{% block organization_item %}
+    {% block organization_item_header %}
+        {% block organization_item_header_image %}
+        <a
+        href="{{ url }}"
+        >
+          <img
+            src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}"
+            class="gallery__figure__image"
+            alt="{{ organization.name }}"
+          />
+        {% endblock %}
+        <figcaption
+          class="gallery__figure__caption"
+        >
+        {% block organization_item_header_title %}
+          <strong
+            class="gallery__city"
+          >{{ organization.title or organization.name }},</strong>
+        {% endblock %}
+
+        {% block organization_item_header_description %}
+          {% if organization.description %}
+            {% if truncate == 0 %}
+              <span class="gallery__country">{{ h.markdown_extract(organization.description)|urlize }}</span>
+            {% else %}
+              <span class="gallery__country">{{ h.markdown_extract(organization.description, truncate)|urlize }}</span>
+            {% endif %}
+          {% endif %}
+        {% endblock %}
+        </figcaption>
+      </a>
+    {% endblock %}
+{% endblock %}

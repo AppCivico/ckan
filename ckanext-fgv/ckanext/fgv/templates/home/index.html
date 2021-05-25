@@ -1,0 +1,93 @@
+{% extends "fgv_page.html" %}
+{% set homepage_style = ( g.homepage_style or '1' ) %}
+{% set root_class = "home-page" %}
+
+{% block subtitle %}{{ _("Welcome") }}{% endblock %}
+
+{% block maintag %}{% endblock %}
+{% block toolbar %}{% endblock %}
+
+{% block content %}
+  <div class="homepage layout-{{ homepage_style }}">
+    <div class="fgv-container">
+      {{ self.flash() }}
+    </div>
+    <main>
+      <div class="header-and-intro section">
+        <div class="intro-section">
+          <div class="fgv-container">
+            {% block promoted %}
+              {% snippet 'home/snippets/fgv_promoted.html' %}
+            {% endblock %}
+
+            {% block search %}
+              {% snippet 'home/snippets/fgv_search.html' %}
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+
+      {% block featured_organization %}
+      <div class="section gallery-section gallery-section--cities">
+        <div class="fgv-container">
+          <h2
+            class="intro-section__title intro-section__title--cities"
+          >{% trans %}Cities{% endtrans %}</h2>
+          {% snippet 'home/snippets/fgv_featured_organization.html' %}
+        </div>
+      </div>
+      {% endblock %}
+
+      <div class="section gallery-section gallery-section--data">
+        <div class="fgv-container">
+          <h2
+            class="intro-section__title intro-section__title--data"
+          >{% trans %}Data{% endtrans %}</h2>
+          {% snippet 'snippets/fgv_tag_list.html' %}
+        </div>
+      </div>
+
+      <div class="section description-section">
+        <div class="fgv-container center">
+          <h2>{% trans %}The project{% endtrans %}</h2>
+          <p>
+            {% trans %}Big Data for Sustainable Urban Development is a project developed by the Getulio Vargas Foundation with financing from the Inter-American Development Bank (IDB) and waze support, which creates a unique opportunity to develop a pilot model of governance of massive data with five cities in Latin America.{% endtrans %}
+          </p>
+        </div>
+      </div>
+
+      <div class="section map-section">
+        <div class="fgv-container">
+          <div class="map-section__content">
+            <p>
+              {% trans %}FGV, as an Executing Agency, coordinates the activities of three components of the project, which is expected to develop by 2020.{% endtrans %}
+            </p>
+
+            <h3 class="topic-title">
+              {% trans %}Component{% endtrans %} I
+            </h3>
+            <p>
+              {% trans %}Mapping the Data Ecosystem and Regulatory Frameworks;{% endtrans %}
+            </p>
+
+            <h3 class="topic-title">
+              {% trans %}Component{% endtrans %} II
+            </h3>
+            <p>
+              {% trans %}Development of Legal and Institutional Resources for The Access and Analysis of Big Data;{% endtrans %}
+            </p>
+
+            <h3 class="topic-title">
+              {% trans %}Component{% endtrans %} III
+            </h3>
+            <p>
+              {% trans %}Development of Tools for Analysis and Visualization of Massive Data and Dissemination of the Project.{% endtrans %}
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+{% endblock %}

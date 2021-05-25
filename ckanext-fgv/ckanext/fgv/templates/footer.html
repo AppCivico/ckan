@@ -1,0 +1,225 @@
+<footer class="fgv-site-footer">
+  <div class="fgv-container">
+    {% block footer_content %}
+      {% block footer_nav %}
+        <ul class="footer-menu">
+          <li class="footer-menu__section">
+            <span class="footer-menu__title">
+              {% trans %}Who we are{% endtrans %}
+            </span>
+            <ul class="footer-menu__section__list">
+                <li class="footer-menu__item">
+                  <a href="https://smartcities-bigdata.fgv.br/agencia-executora">
+                  {% trans %}Funding Agency{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="https://smartcities-bigdata.fgv.br/parceiro-financiador">
+                  {% trans %}Funding partner{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="https://smartcities-bigdata.fgv.br/comite-diretivo">
+                  {% trans %}Steering Committee{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="https://smartcities-bigdata.fgv.br/consultores">
+                  {% trans %}Consultants{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="https://smartcities-bigdata.fgv.br/parceiro-tecnico">
+                  {% trans %}Technical Partners{% endtrans %}
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li class="footer-menu__section">
+            <span class="footer-menu__title">
+              {% trans %}Participating cities{% endtrans %}
+            </span>
+            <ul class="footer-menu__section__list">
+                <li class="footer-menu__item">
+                  <a
+                    href="https://fgv-ckan-aws.appcivico.com/organization/miraflores"
+                  >
+                    {% trans %}Miraflores{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a
+                    href="https://fgv-ckan-aws.appcivico.com/organization/montevideu"
+                  >
+                    {% trans %}Montevideo{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a
+                    href="https://fgv-ckan-aws.appcivico.com/organization/quito"
+                  >
+                    {% trans %}Quito{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a
+                    href="https://fgv-ckan-aws.appcivico.com/organization/sao-paulo"
+                  >
+                    {% trans %}Sao Paulo{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a
+                    href="https://fgv-ckan-aws.appcivico.com/organization/xalapa"
+                  >
+                    {% trans %}Xalapa District{% endtrans %}
+                  </a>
+                </li>
+            </ul>
+          </li>
+
+          <li class="footer-menu__section">
+            <span class="footer-menu__title">
+              {% trans %}Events{% endtrans %}
+            </span>
+            <ul class="footer-menu__section__list">
+                <li class="footer-menu__item">
+                  <a href="https://smartcities-bigdata.fgv.br/proximos-eventos">
+                  {% trans %}Upcoming events{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="https://smartcities-bigdata.fgv.br/eventos-anteriores">
+                  {% trans %}Previous events{% endtrans %}
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li class="footer-menu__section">
+            <span class="footer-menu__title">
+              {% trans %}Products and research{% endtrans %}
+            </span>
+            <ul class="footer-menu__section__list">
+
+
+
+              <li class="footer-menu__item">
+                  <a href="https://smartcities-bigdata.fgv.br/dados"></a>
+                    {% trans %}Data{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="https://smartcities-bigdata.fgv.br/apresentacoes">
+                    {% trans %}Presentation{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="https://smartcities-bigdata.fgv.br/node/99">
+                    {% trans %}Search result{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="https://smartcities-bigdata.fgv.br/casos-de-referencia">
+                    {% trans %}Reference cases{% endtrans %}
+                  </a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#">
+                    {% trans %}Documentation{% endtrans %}
+                  </a>
+                </li>
+            </ul>
+          </li>
+        </ul>
+      {% endblock %}
+
+      <div class="credit-list">
+        <div class="credit-list__item">
+          <h4 class="credit-list__title">
+            {% trans %}Project{% endtrans %}
+          </h4>
+          <img
+            src="/img/logos/big-data--logo.png"
+            srcset="/img/logos/big-data--logo@2x.png 2x,
+             /img/logos/big-data--logo@3x.png 3x"
+            alt="Big Data"
+          />
+        </div>
+        <div class="credit-list__item">
+          <h4 class="credit-list__title">
+            {% trans %}Achievement{% endtrans %}
+          </h4>
+          <img
+            src="/img/logos/fgv-logo.png"
+            srcset="/img/logos/fgv-logo@2x.png 2x,
+             /img/logos/fgv-logo@3x.png 3x"
+            alt="Fundação Getúlio Vargas"
+            />
+        </div>
+        <div class="credit-list__item">
+          <h4 class="credit-list__title">
+            {% trans %}Financing{% endtrans %}
+          </h4>
+          <img
+            src="/img/logos/banco-interamericano-de-desenvolvimento-logo.png"
+            srcset="/img/logos/banco-interamericano-de-desenvolvimento-logo@2x.png 2x,
+             /img/logos/banco-interamericano-de-desenvolvimento-logo@3x.png 3x"
+            alt="Banco Interamericano de Desenvolvimento"
+          />
+        </div>
+        <div class="credit-list__item">
+          <h4 class="credit-list__title">
+            {% trans %}Support{% endtrans %}
+          </h4>
+          <img
+            src="/img/logos/waze.svg"
+            width="100"
+            height="17"
+          />
+        </div>
+      </div>
+
+      <ul class="social-networks">
+        <li class="social-networks__item">
+          <a href="https://www.facebook.com/fgv"><img src="/img/logos/facebook-icon.svg" alt="Facebook"></a>
+        </li>
+        <li class="social-networks__item">
+          <a href="https://www.linkedin.com/school/fgv"><img src="/img/logos/linkedin-icon.svg" alt="LinkedIn"></a>
+        </li>
+        <li class="social-networks__item">
+          <a href="https://twitter.com/fgv"><img src="/img/logos/twitter-icon.svg" alt="twitter"></a>
+        </li>
+        <li class="social-networks__item">
+          <a href="https://plus.google.com/+FGV"><img src="/img/logos/gplus-icon.svg" alt="GPlus"></a>
+        </li>
+        <li class="social-networks__item">
+          <a href="https://www.instagram.com/fgv.oficial/"><img src="/img/logos/instagram-icon.svg" alt="instagram"></a>
+        </li>
+        <li class="social-networks__item">
+          <a href="https://www.youtube.com/fgv"><img src="/img/logos/youtube-icon.svg" alt="youtube"></a>
+        </li>
+      </ul>
+
+      {% block footer_attribution %}
+      <div class="developed-by">
+          <p>
+            {% trans %}<strong>Developed by</strong> <a href="http://appcivico.com">AppCívico</a>{% endtrans %}
+          </p>
+        </div>
+      {% endblock %}
+    {% endblock %}
+  </div>
+
+  {% block footer_debug %}
+    {% if g.debug %}
+      {% include 'snippets/debug.html' %}
+    {% endif %}
+  {% endblock %}
+
+  <div class="disclaimer">
+    <p class="fgv-container">
+      {% trans %}The statements expressed by members of the Getulio Vargas Foundation staff, indicating their identification as such, in articles and interviews published in the media in general, represent exclusively the opinions of their authors and not necessarily the institutional position of FGV. FGV Ordinance No. 19/2018{% endtrans %}
+    </p>
+  </div>
+
+</footer>
